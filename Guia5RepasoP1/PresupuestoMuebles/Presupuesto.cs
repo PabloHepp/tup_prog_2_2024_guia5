@@ -13,7 +13,15 @@ namespace PresupuestoMuebles
         private ArrayList listaProductos = new ArrayList();
         public double Precio
         {
-            get { return Precio; }
+            get {
+                double total = 0;
+                foreach (Producto p in listaProductos)
+                {
+                    total += p.Precio();
+                }
+                return total;
+
+                }
             set { Precio = value; }
         }
 
@@ -28,6 +36,7 @@ namespace PresupuestoMuebles
         public void AgregarProducto(Producto unproducto)
         {
             listaProductos.Add(unproducto);
+
         }
 
         /*
@@ -91,12 +100,26 @@ namespace PresupuestoMuebles
             if(buscado!= null)
             {
                 listaProductos.Remove(buscado);
+                Precio-= buscado.Precio();
                 return true;
             }
 
             return false;
         }
-        
 
+        public string[] Resumen() // que bardo eeehh
+        {
+            String[] detalle = new string[listaProductos.Count + 2];
+            int extra = 0;
+            detalle[extra++] = solicitante.ToString();
+            foreach (Producto p in listaProductos)
+            {
+                detalle[extra++] = $"{p.Codigo} -Peso: {p.Peso()} -Precio:${p.Precio():f3}";
+            }
+
+            detalle[extra++] = $"Total: ${Precio:f4}";
+            return detalle;
+
+        }
     }
 }
