@@ -1,12 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace PresupuestoMuebles
 {
-    internal class Banco
+    internal class Banco:Producto
     {
+        public Banco(double precio, double largo):base(precio,largo) 
+        {
+
+        }
+
+        public override double Peso()
+        {
+            return ((largo*0.25)*0.42);
+        }
+
+        public override double Precio()
+        {
+            return  (Peso() * precioBase * 1.15);
+        }
     }
 }
