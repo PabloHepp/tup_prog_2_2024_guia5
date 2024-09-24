@@ -72,6 +72,34 @@ namespace PresupuestoMuebles
 
         }
 
-        
+        private void btnCerrarPres_Click(object sender, EventArgs e)
+        {
+            FormVer detalles = new FormVer();
+            
+            string[] lista = presupuesto.Resumen();
+            detalles.listBVer.Items.AddRange(lista);
+
+            detalles.ShowDialog();
+
+            detalles.listBVer.Items.Clear();
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+
+            if (cmbProductos.SelectedItem != null)
+            {
+                int cod = Convert.ToInt32(cmbProductos.SelectedItem);
+                presupuesto.QuitarProducto(cod);
+
+                cmbProductos.Items.Remove(cmbProductos.SelectedItem);
+                cmbProductos.Text = "";
+            }
+            else
+            {
+                MessageBox.Show ("debe seleccionar un producto para borrar");
+            }
+
+        }
     }
 }

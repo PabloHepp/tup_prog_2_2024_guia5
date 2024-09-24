@@ -29,26 +29,26 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.gbProducto = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tbNombre = new System.Windows.Forms.TextBox();
-            this.tbDireccion = new System.Windows.Forms.TextBox();
-            this.btnIniciarPresp = new System.Windows.Forms.Button();
-            this.btnCerrarPres = new System.Windows.Forms.Button();
-            this.cmbProductos = new System.Windows.Forms.ComboBox();
             this.btnBorrar = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.tbPrecioB = new System.Windows.Forms.TextBox();
-            this.tbAncho = new System.Windows.Forms.TextBox();
-            this.tbCodigo = new System.Windows.Forms.TextBox();
-            this.tbLargo = new System.Windows.Forms.TextBox();
-            this.tbGrosor = new System.Windows.Forms.TextBox();
+            this.cmbProductos = new System.Windows.Forms.ComboBox();
+            this.btnCerrarPres = new System.Windows.Forms.Button();
+            this.btnIniciarPresp = new System.Windows.Forms.Button();
+            this.tbDireccion = new System.Windows.Forms.TextBox();
+            this.tbNombre = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.gbProducto = new System.Windows.Forms.GroupBox();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.tbCodigo = new System.Windows.Forms.TextBox();
+            this.tbAncho = new System.Windows.Forms.TextBox();
+            this.tbGrosor = new System.Windows.Forms.TextBox();
+            this.tbLargo = new System.Windows.Forms.TextBox();
+            this.tbPrecioB = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnImportar = new System.Windows.Forms.Button();
             this.btnExportar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -72,6 +72,77 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cliente";
             // 
+            // btnBorrar
+            // 
+            this.btnBorrar.Location = new System.Drawing.Point(164, 232);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(111, 23);
+            this.btnBorrar.TabIndex = 6;
+            this.btnBorrar.Text = "Borrar";
+            this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
+            // 
+            // cmbProductos
+            // 
+            this.cmbProductos.FormattingEnabled = true;
+            this.cmbProductos.Location = new System.Drawing.Point(10, 234);
+            this.cmbProductos.Name = "cmbProductos";
+            this.cmbProductos.Size = new System.Drawing.Size(148, 21);
+            this.cmbProductos.TabIndex = 5;
+            // 
+            // btnCerrarPres
+            // 
+            this.btnCerrarPres.Location = new System.Drawing.Point(177, 114);
+            this.btnCerrarPres.Name = "btnCerrarPres";
+            this.btnCerrarPres.Size = new System.Drawing.Size(98, 62);
+            this.btnCerrarPres.TabIndex = 4;
+            this.btnCerrarPres.Text = "Cerrar Presupuesto";
+            this.btnCerrarPres.UseVisualStyleBackColor = true;
+            this.btnCerrarPres.Click += new System.EventHandler(this.btnCerrarPres_Click);
+            // 
+            // btnIniciarPresp
+            // 
+            this.btnIniciarPresp.Location = new System.Drawing.Point(37, 114);
+            this.btnIniciarPresp.Name = "btnIniciarPresp";
+            this.btnIniciarPresp.Size = new System.Drawing.Size(94, 62);
+            this.btnIniciarPresp.TabIndex = 4;
+            this.btnIniciarPresp.Text = "Iniciar Presupuesto";
+            this.btnIniciarPresp.UseVisualStyleBackColor = true;
+            this.btnIniciarPresp.Click += new System.EventHandler(this.btnIniciarPresp_Click);
+            // 
+            // tbDireccion
+            // 
+            this.tbDireccion.Location = new System.Drawing.Point(64, 56);
+            this.tbDireccion.Name = "tbDireccion";
+            this.tbDireccion.Size = new System.Drawing.Size(226, 20);
+            this.tbDireccion.TabIndex = 3;
+            // 
+            // tbNombre
+            // 
+            this.tbNombre.Location = new System.Drawing.Point(64, 27);
+            this.tbNombre.Name = "tbNombre";
+            this.tbNombre.Size = new System.Drawing.Size(226, 20);
+            this.tbNombre.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 59);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Direccion";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Nombre";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // gbProducto
             // 
             this.gbProducto.Controls.Add(this.btnAgregar);
@@ -93,110 +164,50 @@
             this.gbProducto.Text = "Producto";
             this.gbProducto.Visible = false;
             // 
-            // label1
+            // btnAgregar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nombre";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.btnAgregar.Location = new System.Drawing.Point(188, 107);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(137, 23);
+            this.btnAgregar.TabIndex = 2;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // label2
+            // tbCodigo
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 59);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Direccion";
+            this.tbCodigo.Location = new System.Drawing.Point(59, 107);
+            this.tbCodigo.Name = "tbCodigo";
+            this.tbCodigo.Size = new System.Drawing.Size(100, 20);
+            this.tbCodigo.TabIndex = 1;
             // 
-            // tbNombre
+            // tbAncho
             // 
-            this.tbNombre.Location = new System.Drawing.Point(64, 27);
-            this.tbNombre.Name = "tbNombre";
-            this.tbNombre.Size = new System.Drawing.Size(226, 20);
-            this.tbNombre.TabIndex = 2;
+            this.tbAncho.Location = new System.Drawing.Point(58, 59);
+            this.tbAncho.Name = "tbAncho";
+            this.tbAncho.Size = new System.Drawing.Size(100, 20);
+            this.tbAncho.TabIndex = 1;
             // 
-            // tbDireccion
+            // tbGrosor
             // 
-            this.tbDireccion.Location = new System.Drawing.Point(64, 56);
-            this.tbDireccion.Name = "tbDireccion";
-            this.tbDireccion.Size = new System.Drawing.Size(226, 20);
-            this.tbDireccion.TabIndex = 3;
+            this.tbGrosor.Location = new System.Drawing.Point(225, 60);
+            this.tbGrosor.Name = "tbGrosor";
+            this.tbGrosor.Size = new System.Drawing.Size(100, 20);
+            this.tbGrosor.TabIndex = 1;
             // 
-            // btnIniciarPresp
+            // tbLargo
             // 
-            this.btnIniciarPresp.Location = new System.Drawing.Point(37, 114);
-            this.btnIniciarPresp.Name = "btnIniciarPresp";
-            this.btnIniciarPresp.Size = new System.Drawing.Size(94, 62);
-            this.btnIniciarPresp.TabIndex = 4;
-            this.btnIniciarPresp.Text = "Iniciar Presupuesto";
-            this.btnIniciarPresp.UseVisualStyleBackColor = true;
-            this.btnIniciarPresp.Click += new System.EventHandler(this.btnIniciarPresp_Click);
+            this.tbLargo.Location = new System.Drawing.Point(225, 30);
+            this.tbLargo.Name = "tbLargo";
+            this.tbLargo.Size = new System.Drawing.Size(100, 20);
+            this.tbLargo.TabIndex = 1;
             // 
-            // btnCerrarPres
+            // tbPrecioB
             // 
-            this.btnCerrarPres.Location = new System.Drawing.Point(177, 114);
-            this.btnCerrarPres.Name = "btnCerrarPres";
-            this.btnCerrarPres.Size = new System.Drawing.Size(98, 62);
-            this.btnCerrarPres.TabIndex = 4;
-            this.btnCerrarPres.Text = "Cerrar Presupuesto";
-            this.btnCerrarPres.UseVisualStyleBackColor = true;
-            // 
-            // cmbProductos
-            // 
-            this.cmbProductos.FormattingEnabled = true;
-            this.cmbProductos.Location = new System.Drawing.Point(10, 234);
-            this.cmbProductos.Name = "cmbProductos";
-            this.cmbProductos.Size = new System.Drawing.Size(148, 21);
-            this.cmbProductos.TabIndex = 5;
-            // 
-            // btnBorrar
-            // 
-            this.btnBorrar.Location = new System.Drawing.Point(164, 232);
-            this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(111, 23);
-            this.btnBorrar.TabIndex = 6;
-            this.btnBorrar.Text = "Borrar";
-            this.btnBorrar.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 34);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Precio B";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 62);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 13);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Ancho";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 110);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 13);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Código";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(185, 34);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(34, 13);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Largo";
+            this.tbPrecioB.Location = new System.Drawing.Point(58, 30);
+            this.tbPrecioB.Name = "tbPrecioB";
+            this.tbPrecioB.Size = new System.Drawing.Size(100, 20);
+            this.tbPrecioB.TabIndex = 1;
             // 
             // label7
             // 
@@ -207,50 +218,41 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Grosor";
             // 
-            // tbPrecioB
+            // label6
             // 
-            this.tbPrecioB.Location = new System.Drawing.Point(58, 30);
-            this.tbPrecioB.Name = "tbPrecioB";
-            this.tbPrecioB.Size = new System.Drawing.Size(100, 20);
-            this.tbPrecioB.TabIndex = 1;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(185, 34);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(34, 13);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Largo";
             // 
-            // tbAncho
+            // label5
             // 
-            this.tbAncho.Location = new System.Drawing.Point(58, 59);
-            this.tbAncho.Name = "tbAncho";
-            this.tbAncho.Size = new System.Drawing.Size(100, 20);
-            this.tbAncho.TabIndex = 1;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(13, 110);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(40, 13);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Código";
             // 
-            // tbCodigo
+            // label4
             // 
-            this.tbCodigo.Location = new System.Drawing.Point(59, 107);
-            this.tbCodigo.Name = "tbCodigo";
-            this.tbCodigo.Size = new System.Drawing.Size(100, 20);
-            this.tbCodigo.TabIndex = 1;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(17, 62);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(38, 13);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Ancho";
             // 
-            // tbLargo
+            // label3
             // 
-            this.tbLargo.Location = new System.Drawing.Point(225, 30);
-            this.tbLargo.Name = "tbLargo";
-            this.tbLargo.Size = new System.Drawing.Size(100, 20);
-            this.tbLargo.TabIndex = 1;
-            // 
-            // tbGrosor
-            // 
-            this.tbGrosor.Location = new System.Drawing.Point(225, 60);
-            this.tbGrosor.Name = "tbGrosor";
-            this.tbGrosor.Size = new System.Drawing.Size(100, 20);
-            this.tbGrosor.TabIndex = 1;
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Location = new System.Drawing.Point(188, 107);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(137, 23);
-            this.btnAgregar.TabIndex = 2;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 34);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Precio B";
             // 
             // btnImportar
             // 
